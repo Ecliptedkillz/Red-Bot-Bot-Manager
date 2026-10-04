@@ -1,0 +1,5 @@
+# Caddy obtains and renews the HTTPS certificate for this domain.
+bots.eclipted.com {
+	encode zstd gzip
+	reverse_proxy 127.0.0.1:{$BOTMANAGER_PORT:8765}
+}
